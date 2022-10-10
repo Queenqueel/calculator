@@ -1,7 +1,11 @@
 function insert(num) {
     var numero =
         document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = numero + num;
+    if (numero.length <= 10) {
+        document.getElementById('resultado').innerHTML = numero + num;
+    } else {
+        return;
+    }
 }
 
 function clean() {
